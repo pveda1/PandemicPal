@@ -174,6 +174,9 @@ struct CheckIn: View {
         .frame(width: 414, height: 896)
         .background(Color(red: 0.87, green: 0.90, blue: 0.91))
         .edgesIgnoringSafeArea(.all)
+        //.navigationBarTitle("")
+          //      .navigationBarBackButtonHidden(true)
+            //    .navigationBarHidden(true)
 
 
             

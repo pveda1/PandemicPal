@@ -53,6 +53,18 @@ struct ContentView: View {
                     
                     Spacer()
                     
+                    NavigationLink(destination: CheckIn()) {
+                        Text("register.")
+                            .navigationBarTitle("")
+                            .navigationBarHidden(true)
+                            .font(.custom("Roboto-Bold", size: 24))
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 297, height: 69)
+                            .background(Color(red: 0.99, green: 0.59, blue: 0.49))
+                            .cornerRadius(26)
+                    }
+                    /**
                     Button("register."){
                         print("button tapped")
                     }
@@ -63,11 +75,18 @@ struct ContentView: View {
                         .background(Color(red: 0.99, green: 0.59, blue: 0.49))
                         .cornerRadius(26)
 
-                    Button("sign in.") {
-                        
+                    //Button("sign in.") {
+                      //  CheckIn()
+                    //}
+                    */
+                    NavigationLink(destination: CheckIn()) {
+                        Text("sign in.")
+                            .navigationBarTitle("")
+                            .navigationBarHidden(true)
+                            .foregroundColor(Color(red: 0.99, green: 0.59, blue: 0.49))
+                            .font(.title3)
                     }
-                    .foregroundColor(Color(red: 0.99, green: 0.59, blue: 0.49))
-                    .font(.title3)
+                    
                 }
                 .frame(width: 415, height: 125)
                 .offset(x: 0, y: 170)
@@ -81,6 +100,7 @@ struct ContentView: View {
         }
     }
 }
+
                 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -89,6 +109,7 @@ struct ContentView_Previews: PreviewProvider {
         }
     }
 }
+
 
 /**
 HStack(spacing: 55.50) {
