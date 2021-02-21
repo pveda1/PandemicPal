@@ -29,6 +29,7 @@
 		F1B40C4B25E2015600ADD1CD /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1B40C3E25E2015600ADD1CD /* Roboto-LightItalic.ttf */; };
 		F1B40C4E25E203BE00ADD1CD /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1B40C4D25E203BE00ADD1CD /* Inter-Regular.ttf */; };
 		F1B40C5125E203CF00ADD1CD /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1B40C5025E203CF00ADD1CD /* Inter-Bold.ttf */; };
+		F1B40C5425E234A700ADD1CD /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B40C5325E234A700ADD1CD /* Resources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		F1B40C3E25E2015600ADD1CD /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		F1B40C4D25E203BE00ADD1CD /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		F1B40C5025E203CF00ADD1CD /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		F1B40C5325E234A700ADD1CD /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				F1B40C1025E1930600ADD1CD /* SceneDelegate.swift */,
 				F1B40C1225E1930600ADD1CD /* ContentView.swift */,
 				F1B40C2725E1CAAB00ADD1CD /* CheckIn.swift */,
+				F1B40C5325E234A700ADD1CD /* Resources.swift */,
 				F1B40C1425E1930700ADD1CD /* Assets.xcassets */,
 				F1B40C1925E1930800ADD1CD /* LaunchScreen.storyboard */,
 				F1B40C1C25E1930800ADD1CD /* Info.plist */,
@@ -211,6 +214,7 @@
 				F1B40C0F25E1930500ADD1CD /* AppDelegate.swift in Sources */,
 				F1B40C2825E1CAAB00ADD1CD /* CheckIn.swift in Sources */,
 				F1B40C1125E1930600ADD1CD /* SceneDelegate.swift in Sources */,
+				F1B40C5425E234A700ADD1CD /* Resources.swift in Sources */,
 				F1B40C1325E1930600ADD1CD /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
