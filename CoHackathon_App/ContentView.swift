@@ -9,77 +9,75 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
+        NavigationView {
             ZStack {
                 ZStack {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 79)
+                            .fill(Color(red: 0.36, green: 0.49, blue: 0.56))
+                            .offset(x: 0, y: -324.73)
+                            .frame(width: 415.04, height: 534.46)
+
+                        Rectangle()
+                            .fill(Color(red: 0.36, green: 0.49, blue: 0.56))
+                            .offset(x: -168, y: -595.96)
+                            .frame(width: 90, height: 145.08)
+                    }
+                    .offset(x: 0, y: 371.8)
+                    .frame(width: 415.04, height: 611)
+
                     RoundedRectangle(cornerRadius: 79)
-                        .fill(Color(red: 0.36, green: 0.49, blue: 0.56))
-                        .offset(x: 0, y: -324.73)
-                        .frame(width: 415.04, height: 534.46)
-
-                    Rectangle()
-                        .fill(Color(red: 0.36, green: 0.49, blue: 0.56))
-                        .offset(x: -168, y: -595.96)
-                        .frame(width: 90, height: 145.08)
+                        .fill(Color(red: 0.87, green: 0.90, blue: 0.91))
+                        .offset(x: 0, y: -440)
+                        .frame(width: 411, height: 440)
                 }
-                .offset(x: 0, y: 371.8)
-                .frame(width: 415.04, height: 611)
+                .offset(x: 0, y: 252)
+                .frame(width: 415.04, height: 1226)
 
-                RoundedRectangle(cornerRadius: 79)
-                    .fill(Color(red: 0.87, green: 0.90, blue: 0.91))
-                    .offset(x: 0, y: -440)
-                    .frame(width: 411, height: 440)
-            }
-            .offset(x: 0, y: 252)
-            .frame(width: 415.04, height: 1226)
+                VStack(spacing: 0) {
+                    //welcome.
+                    Text("welcome.").font(.custom("Roboto Bold", size: 36)).foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1)))
+                    
+                    //insert slogan.
+                    Text("[insert slogan]").font(.custom("Roboto Regular", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1))).multilineTextAlignment(.center)
 
-            VStack(spacing: 0) {
-                    Text("welcome.")
-                        .font(.custom("Roboto", size: 36))
-                        .fontWeight(.bold)
+                }
+                .frame(width: 415, height: 125)
+                .offset(x: 0, y: -300)
+
+                VStack(spacing: 15) {
+                    Button("register."){
+                        print("button tapped")
+                    }
+                        .font(.custom("Roboto", size: 24))
+                        .foregroundColor(.white)
                         .multilineTextAlignment(.center)
-                        .foregroundColor(Color(red: 0.21, green: 0.37, blue: 0.45))
-                        .frame(width: 160, height: 41, alignment: .topLeading)
+                        .frame(width: 297, height: 69)
+                        .background(Color(red: 0.99, green: 0.59, blue: 0.49))
+                        .cornerRadius(26)
+
+                    Button("sign in.") {
                         
-                    Text("[insert slogan]")
-                        .font(.title3)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color(red: 0.21, green: 0.37, blue: 0.45))
-                        .frame(width: 415, height: 84, alignment: .top)
-            }
-            .frame(width: 415, height: 125)
-            .offset(x: 0, y: -300)
-
-            VStack(spacing: 15) {
-                Text("register.")
-                    .font(.custom("Roboto", size: 24))
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .frame(width: 297, height: 69)
-                    .background(Color(red: 0.99, green: 0.59, blue: 0.49))
-                    .cornerRadius(26)
-
-                Text("sign in.")
-                    .underline()
+                    }
                     .foregroundColor(Color(red: 0.99, green: 0.59, blue: 0.49))
                     .font(.title3)
+                }
+                .frame(width: 415, height: 125)
+                .offset(x: 0, y: 170)
+                 
             }
-            .frame(width: 415, height: 125)
-            .offset(x: 0, y: 170)
-             
+            .frame(maxWidth: 415.04, maxHeight: .infinity)
+            .frame(width: 414, height: 896)
+            .background(Color(red: 0.87, green: 0.90, blue: 0.91))
+        }
+        
     }
-    .frame(maxWidth: 415.04, maxHeight: .infinity)
-    .frame(width: 414, height: 896)
-    .background(Color(red: 0.87, green: 0.90, blue: 0.91))
-}
 
 }
-
                 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView()
             ContentView()
         }
     }
