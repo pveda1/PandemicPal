@@ -9,109 +9,172 @@ import SwiftUI
 
 struct CheckIn: View {
     var body: some View {
-        VStack() {
-            ZStack {
+        //VStack() {
+        ZStack {
                 Image("NavTop")
                     .resizable()
-
+            
+            VStack(alignment: .center, spacing: 100) {
                 VStack(alignment: .leading, spacing: 0) {
                     //Daily Check-in
-                    Text("Daily Check-in").font(.custom("Roboto Bold", size: 20)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).fontWeight(.heavy)
+                    Text("Daily Check-in").font(.custom("Roboto-Bold", size: 20)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).fontWeight(.heavy)
                 
                     //Checking in daily makes it...
-                    Text("Checking in daily makes it easy to track your well-being. ").font(.custom("Inter Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                    Text("Checking in daily makes it easy to track your well-being. ").font(.custom("Inter-Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
         
                 }
-                .offset(x: 5, y: 30)
-
-            }
             
-            VStack(alignment: .leading, spacing: 6) {
-                Text("How are you feeling today?")
-                .fontWeight(.bold)
-                    .font(.callout)
-                Image("CheckIn")
-                    .resizable()
-            }
-            .frame(width: 386, height: 125)
-            .offset(x: 0, y: -325)
-            
-            VStack(alignment: .leading, spacing: 6) {
-                Text("Do you feel any common symptoms?")
-                .fontWeight(.bold)
-                    .font(.callout)
-                
-                HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 10) {
-                    VStack() {
-                        Button("Fever") {
-                        }
-                        .font(.custom("Inter Bold", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1))).multilineTextAlignment(.center)
-                        Button("Loss of Appetite") {
-                        }
-                        Button("Congestion") {
-                        }
-                    }
-                    VStack() {
-                        Button("Dry Cough") {
-                        }
-                        .font(.custom("Inter Bold", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1))).multilineTextAlignment(.center)
-                        Button("Sore Throat") {
-                        }
-                        Button("Runny Nose") {
-                        }
-                    }
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("How are you feeling today?")
+                    .fontWeight(.bold)
+                        .font(.custom("Roboto-Regular", size: 16))
+                    Image("CheckIn")
+                        .resizable()
                 }
-                .frame(width: 282, height: 113)
+                .frame(width: 386, height: 130)
+
                 
-            }
-            .offset(x: 0, y: -200)
-            
-            VStack(alignment: .leading, spacing: 17) {
-                Text("Do you think you have come into contact with someone with COVID?")
-                .fontWeight(.bold)
-                .font(.callout)
-                .frame(width: 389, alignment: .leading)
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Do you feel any common symptoms?")
+                        .fontWeight(.bold)
+                            .font(.callout)
+                    
+                    HStack(alignment: .center, spacing: 10) {
+                        VStack(spacing: 10) {
+                            Button("Fever") {
+                            }
+                            .font(.custom("Inter-Bold", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1))).multilineTextAlignment(.center)
+                            .frame(width: 125, height: 35)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 25).stroke(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1)), lineWidth: 2))
+                            .cornerRadius(25)
 
-                VStack() {
-                        HStack(spacing: 7) {
-                                    Ellipse()
-                                    .stroke(Color(red: 0.71, green: 0.77, blue: 0.83), lineWidth: 1)
-                                    .frame(width: 24, height: 24)
+                            Button("Loss of Appetite") {
+                            }
+                            .font(.custom("Inter-Bold", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1))).multilineTextAlignment(.center)
+                            .frame(width: 125, height: 35)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 25).stroke(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1)), lineWidth: 2))
+                            .cornerRadius(25)
 
-                                    Text("Yes")
-                                    .font(.callout)
-                                    .frame(width: 86, alignment: .leading)
-                                    .lineSpacing(20)
+                            Button("Congestion") {
+                            }
+                            .font(.custom("Inter-Bold", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1))).multilineTextAlignment(.center)
+                            .frame(width: 125, height: 35)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 25).stroke(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1)), lineWidth: 2))
+                            .cornerRadius(25)
+
                         }
-                        .frame(width: 117, height: 24)
-
-                        HStack(spacing: 7) {
-                                    Ellipse()
-                                    .stroke(Color(red: 0.71, green: 0.77, blue: 0.83), lineWidth: 1)
-                                    .frame(width: 24, height: 24)
-
-                                    Text("No")
-                                    .font(.callout)
-                                    .frame(width: 86, alignment: .leading)
-                                    .lineSpacing(20)
+                        
+                        VStack(spacing: 10) {
+                            Button("Dry Cough") {
+                            }
+                            .font(.custom("Inter-Bold", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1))).multilineTextAlignment(.center)
+                            .frame(width: 125, height: 35)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 25).stroke(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1)), lineWidth: 2))
+                            .cornerRadius(25)
+                            
+                            Button("Sore Throat") {
+                            }
+                            .font(.custom("Inter-Bold", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1))).multilineTextAlignment(.center)
+                            .frame(width: 125, height: 35)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 25).stroke(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1)), lineWidth: 2))
+                            .cornerRadius(25)
+                            
+                            Button("Runny Nose") {
+                            }
+                            .font(.custom("Inter-Bold", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1))).multilineTextAlignment(.center)
+                            .frame(width: 125, height: 35)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 25).stroke(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1)), lineWidth: 2))
+                            .cornerRadius(25)
                         }
-                        .frame(width: 117, height: 24)
+                        
+                        Spacer()
+                    }
+                    .frame(width: 386, height: 120)
 
-                        HStack(spacing: 7) {
-                                    Ellipse()
-                                    .stroke(Color(red: 0.71, green: 0.77, blue: 0.83), lineWidth: 1)
-                                    .frame(width: 24, height: 24)
-
-                                    Text("Not sure")
-                                    .font(.callout)
-                                    .frame(width: 86, alignment: .leading)
-                                    .lineSpacing(20)
-                        }
-                        .frame(width: 117, height: 24)
                 }
-                .frame(width: 117, height: 104)
+                .frame(width: 386, height: 200)
+                .offset(x: 0, y: -80)
+                
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Do you think you have come into contact with someone with COVID?")
+                    .fontWeight(.bold)
+                    .font(.callout)
+                        .frame(width: 389, height: 55,  alignment: .leading)
+
+                    VStack(spacing: 10) {
+                            HStack(spacing: 7) {
+                                        Ellipse()
+                                        .stroke(Color(red: 0.71, green: 0.77, blue: 0.83), lineWidth: 1)
+                                        .frame(width: 24, height: 24)
+
+                                        Text("Yes")
+                                            .font(.custom("Roboto-Regular", size: 16))
+                                        .frame(width: 86, alignment: .leading)
+                                        .lineSpacing(20)
+                            }
+                            .frame(width: 117, height: 24)
+
+                            HStack(spacing: 7) {
+                                        Ellipse()
+                                        .stroke(Color(red: 0.71, green: 0.77, blue: 0.83), lineWidth: 1)
+                                        .frame(width: 24, height: 24)
+
+                                        Text("No")
+                                            .font(.custom("Roboto-Regular", size: 16))
+                                        .frame(width: 86, alignment: .leading)
+                                        .lineSpacing(20)
+                            }
+                            .frame(width: 117, height: 24)
+
+                            HStack(spacing: 7) {
+                                        Ellipse()
+                                        .stroke(Color(red: 0.71, green: 0.77, blue: 0.83), lineWidth: 1)
+                                        .frame(width: 24, height: 24)
+
+                                        Text("Not sure")
+                                            .font(.custom("Roboto-Regular", size: 16))
+                                        .frame(width: 86, alignment: .leading)
+                                        .lineSpacing(20)
+                            }
+                            .frame(width: 117, height: 24)
+                    }
+                    .frame(width: 117, height: 104)
+
             }
             .frame(width: 389, height: 159)
+                .offset(x: 0, y: -160)
+                
+            
+            }
+            .frame(width: 414, height: 800)
+            .offset(x: 0, y: 60)
+            
+            Button("complete."){
+                print("button tapped")
+            }
+            .font(.custom("Roboto-Bold", size: 16))
+            .multilineTextAlignment(.center)
+            .padding(.vertical, 13)
+            .padding(.leading, 106)
+            .padding(.trailing, 107)
+            .foregroundColor(Color.white)
+            .background(LinearGradient(gradient: Gradient(colors: [Color(red: 0.99, green: 0.59, blue: 0.49), Color(red: 0.99, green: 0.78, blue: 0.73)]), startPoint: .leading, endPoint: .trailing))
+            .cornerRadius(12)
+            .frame(width: 302, height: 45)
+            .offset(x: 0, y: 370)
+
+
+        }
+        .frame(width: 414, height: 896)
+        .background(Color(red: 0.87, green: 0.90, blue: 0.91))
+        .edgesIgnoringSafeArea(.all)
+
 
             
             
@@ -127,8 +190,8 @@ struct CheckIn: View {
             
             //Spacer()
             //Spacer()
-        }
-        .frame(width: 414, height: 896)
+       // }
+        //.frame(width: 414, height: 896)
 
     }
 }

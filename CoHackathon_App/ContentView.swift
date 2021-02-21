@@ -35,21 +35,28 @@ struct ContentView: View {
                 .frame(width: 415.04, height: 1226)
 
                 VStack(spacing: 0) {
-                    //welcome.
-                    Text("welcome.").font(.custom("Roboto Bold", size: 36)).foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1)))
                     
-                    //insert slogan.
-                    Text("[insert slogan]").font(.custom("Roboto Regular", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1))).multilineTextAlignment(.center)
-
+                    //welcome to PandemicPal
+                    Text("welcome to PandemicPal").font(.custom("Roboto-Bold", size: 30)).foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1)))
+                    
+                    //making sure you are safe d...
+                    Text("making sure you are safe during these times.").font(.custom("Roboto-Regular", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.35, blue: 0.44, alpha: 1))).multilineTextAlignment(.center)
+                    
+                    Image("Woman_Mask")
+                        .resizable()
+                    
                 }
-                .frame(width: 415, height: 125)
-                .offset(x: 0, y: -300)
-
+                .frame(width: 415, height: 500)
+                .offset(x: 0, y: -110)
+               
                 VStack(spacing: 15) {
+                    
+                    Spacer()
+                    
                     Button("register."){
                         print("button tapped")
                     }
-                        .font(.custom("Roboto", size: 24))
+                        .font(.custom("Roboto-Bold", size: 24))
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
                         .frame(width: 297, height: 69)
@@ -69,10 +76,10 @@ struct ContentView: View {
             .frame(maxWidth: 415.04, maxHeight: .infinity)
             .frame(width: 414, height: 896)
             .background(Color(red: 0.87, green: 0.90, blue: 0.91))
-        }
-        
-    }
+            .edgesIgnoringSafeArea(.all)
 
+        }
+    }
 }
                 
 struct ContentView_Previews: PreviewProvider {
